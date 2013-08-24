@@ -1,6 +1,6 @@
 {
   "name": "choke",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Function call throttling with hook for cancelling",
   "keywords": [],
   "author": "Matt-Esch <matt@mattesch.info>",
