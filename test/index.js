@@ -125,3 +125,23 @@ test("choke preserves this", function (assert) {
 
     choked.listener()
 })
+
+test("choke resumes after timeout", function (assert) {
+    var lastEvent = null
+
+    var choked = choke(function (e) {
+        if (e === 0) {
+            assert.equal(lastEvent, null)
+        } else if (e === 1) {
+            assert.equal(lastEvent, 0)
+            assert.end()
+        }
+
+        lastEvent = e
+    }, 1000)
+
+    choked.listener(0)
+    setTimeout(function () {
+        choked.listener(1)
+    }, 2000)
+})

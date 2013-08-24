@@ -24,12 +24,13 @@ function choke(f, rate) {
             free()
             return result
         } else {
-            clearInterval(interval)
+            cancel()
         }
     }
 
     function cancel () {
         clearInterval(interval)
+        interval = null
         free()
     }
 

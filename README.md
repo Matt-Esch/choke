@@ -4,7 +4,9 @@
 
 <!-- [![build status][1]][2] [![NPM version][7]][8] [![dependency status][3]][4] -->
 
-Event throttle with hook for cancelling
+Function call throttling with hook for cancelling
+
+[![browser support](https://ci.testling.com/USER/PROJECT.png)](https://ci.testling.com/USER/PROJECT)]
 
 ## Example
 
