@@ -6,7 +6,7 @@
 
 Function call throttling with hook for cancelling
 
-[![browser support](https://ci.testling.com/USER/PROJECT.png)](https://ci.testling.com/USER/PROJECT)]
+[![browser support](https://ci.testling.com/USER/PROJECT.png)](https://ci.testling.com/USER/PROJECT)
 
 ## Example
 
