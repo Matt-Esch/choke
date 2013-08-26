@@ -13,13 +13,18 @@ Function call throttling with hook for cancelling
 ```js
 var choke = require("choke")
 var EventSource = require("eventsource-reconnect")
+var setInterval = require("timers").setInterval
 
 var source = new EventSource("http://localhost:1234/events")
-
 var reconnect = choke(source.reconnect, 15000)
 
 source.onopen = reconnect.cancel    // kill any outstanding reconnect attempts
-source.onclose = reconnect.listener // throttle reconnects to 15 seconds
+
+setInterval(function ()) {
+    if (source.readyState === source.CLOSED) {
+        source.onclose = reconnect.listener // throttle reconnects to 15 secs
+    }
+}, 1000)
 ```
 
 ## Installation
